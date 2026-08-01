@@ -73,22 +73,20 @@ questions[current].options[1];
 
 function nextQuestion(){
 
-current++;
+    current++;
 
+    if(current < questions.length){
 
-if(current < questions.length){
+        showQuestion();
 
-showQuestion();
+    }
+    else{
 
-}
+        document.getElementById("quizBox").style.display="none";
 
-else{
+        document.getElementById("messageBox").style.display="block";
 
-document.getElementById("quizBox").style.display="none";
-
-document.getElementById("messageBox").style.display="block";
-
-}
+    }
 
 }
 
