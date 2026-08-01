@@ -47,6 +47,7 @@ showQuestion();
 }
 
 
+
 function noAnswer(){
 
 alert("Try again 😄");
@@ -72,13 +73,6 @@ questions[current].options[1];
 
 function nextQuestion(){
 
-let box=document.getElementById("quizBox");
-
-box.style.opacity="0";
-
-
-setTimeout(()=>{
-
 current++;
 
 
@@ -86,9 +80,8 @@ if(current < questions.length){
 
 showQuestion();
 
-box.style.opacity="1";
-
 }
+
 else{
 
 document.getElementById("quizBox").style.display="none";
@@ -97,10 +90,7 @@ document.getElementById("messageBox").style.display="block";
 
 }
 
-},1500);
-
 }
-
 
 
 
@@ -147,7 +137,6 @@ changePhoto();
 
 
 
-
 function changePhoto(){
 
 let img=document.getElementById("photo");
@@ -155,16 +144,9 @@ let img=document.getElementById("photo");
 let text=document.getElementById("caption");
 
 
-img.style.opacity=0;
-
-
-setTimeout(()=>{
-
 img.src=photos[photoIndex];
 
 text.innerHTML=captions[photoIndex];
-
-img.style.opacity=1;
 
 
 photoIndex++;
@@ -175,10 +157,6 @@ if(photoIndex>=photos.length){
 photoIndex=0;
 
 }
-
-
-},500);
-
 
 
 setTimeout(changePhoto,4000);
