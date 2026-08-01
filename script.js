@@ -100,6 +100,10 @@ else{
 document.getElementById("quizBox").style.display="none";
 
 document.getElementById("messageBox").style.display="block";
+
+}
+
+}
 let photoIndex = 0;
 
 
@@ -155,43 +159,31 @@ changePhoto();
 
 function changePhoto(){
 
-let img = document.getElementById("photo");
+    let img = document.getElementById("photo");
+    let text = document.getElementById("caption");
 
-let text = document.getElementById("caption");
+    img.onload = function(){
 
+        text.innerHTML = captions[photoIndex];
 
-img.style.opacity="0";
+        setTimeout(function(){
 
+            photoIndex++;
 
-setTimeout(()=>{
+            if(photoIndex >= photos.length){
+                photoIndex = 0;
+            }
 
-img.src = photos[photoIndex];
+            changePhoto();
 
-text.innerHTML = captions[photoIndex];
+        },4000);
 
+    };
 
-img.style.opacity="1";
+    img.src = photos[photoIndex];
 
-
-photoIndex++;
-
-
-if(photoIndex >= photos.length){
-
-photoIndex = 0;
-
-}
-
-
-},800);
-
-
-setTimeout(changePhoto,5000);
-
-}
 }
 // Optional: stop slideshow when page is closed
 window.addEventListener("beforeunload", function(){
     photoIndex = 0;
 });
-}
