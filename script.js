@@ -87,6 +87,9 @@ document.getElementById("messageBox").style.display="block";
 
 
 
+
+// Photos slideshow
+
 let photoIndex = 0;
 
 
@@ -96,17 +99,21 @@ let photos = [
 "IMG_20250328_152814.jpg",
 "IMG_20250328_143737.jpg",
 "IMG_1610.JPEG",
-"IMG_1609.JPEG"
+"IMG_1609.JPEG",
+"IMG_1608.JPEG",
+"IMG_1442.JPG"
 ];
 
 
 let captions = [
 "Beautiful memories ❤️",
-"Always remember these moments ✨",
+"Every moment was special ✨",
 "Crazy friendship days 😂",
-"Special moments 🤍",
-"Forever friendship 🤝",
-"Keep smiling 😊"
+"Always remember these smiles 😊",
+"Friendship forever 🤝",
+"Never forget these moments ❤️",
+"Special bond ✨",
+"Forever memories 📸"
 ];
 
 
@@ -117,6 +124,8 @@ document.getElementById("messageBox").style.display="none";
 
 document.getElementById("photoBox").style.display="block";
 
+photoIndex = 0;
+
 changePhoto();
 
 }
@@ -125,31 +134,31 @@ changePhoto();
 
 function changePhoto(){
 
-let img=document.getElementById("photo");
+let img = document.getElementById("photo");
 
-let text=document.getElementById("caption");
+let text = document.getElementById("caption");
 
 
-img.style.opacity=0;
+img.style.opacity = 0;
 
 
 setTimeout(function(){
 
-img.src=photos[photoIndex];
+img.src = photos[photoIndex];
 
-text.innerHTML=captions[photoIndex];
+text.innerHTML = captions[photoIndex];
 
-img.style.opacity=1;
+img.style.opacity = 1;
 
 
 photoIndex++;
 
-if(photoIndex>=photos.length){
 
-photoIndex=0;
+if(photoIndex >= photos.length){
+
+photoIndex = 0;
 
 }
-
 
 },1000);
 
