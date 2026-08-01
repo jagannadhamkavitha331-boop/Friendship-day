@@ -2,20 +2,23 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Friendship Day ❤️</title>
+<title>Friendship Surprise ❤️</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
 <div class="container">
 
-<!-- First Question -->
+
+<!-- Opening Question -->
 
 <div id="questionBox">
 
@@ -28,29 +31,33 @@
 </div>
 
 
-<!-- Questions -->
+
+<!-- Questions Section -->
 
 <div id="quizBox" style="display:none;">
 
 <h2 id="questionText"></h2>
 
-<button onclick="nextQuestion()">Next ➡️</button>
+<button id="option1" onclick="nextQuestion()"></button>
+
+<button id="option2" onclick="nextQuestion()"></button>
 
 </div>
 
 
-<!-- Friendship Message -->
+
+<!-- After Questions -->
 
 <div id="messageBox" style="display:none;">
 
 <h1>Happy Friendship Day ❤️</h1>
 
 <p>
-Some friendships are not just memories,
-they are beautiful journeys forever ✨
+A true friendship is a beautiful journey filled with memories ✨
 </p>
 
 </div>
+
 
 
 <!-- Photos -->
@@ -83,6 +90,7 @@ they are beautiful journeys forever ✨
 
 
 <script src="script.js"></script>
+
 
 </body>
 
