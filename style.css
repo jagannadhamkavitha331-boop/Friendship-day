@@ -1,0 +1,21 @@
+body{
+    margin:0;
+    padding:0;
+    background:#000;
+    color:white;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+h1{
+    color:#00d4ff;
+    font-size:40px;
+}
+
+p{
+    font-size:20px;
+}
