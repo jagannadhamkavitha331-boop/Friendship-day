@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Friendship Surprise ❤️</title>
+<title>Happy Friendship Day ❤️</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
 <div class="container">
 
+<!-- Welcome Screen -->
 
-<!-- Opening Question -->
+<div id="questionBox" class="card">
 
-<div id="questionBox">
+<h1>Happy Friendship Day 💖</h1>
 
-<h1>Are you Eswar? 😊</h1>
+<p>Are you Eswar? 😊</p>
 
 <button onclick="startQuestions()">Yes ❤️</button>
-
-<button onclick="noAnswer()">No 😄</button>
+<button onclick="noAnswer()">No 😅</button>
 
 </div>
 
+<!-- Quiz -->
 
-
-<!-- Questions -->
-
-<div id="quizBox" style="display:none;">
+<div id="quizBox" class="card" style="display:none;">
 
 <h2 id="questionText"></h2>
 
@@ -44,30 +37,29 @@
 
 </div>
 
+<!-- Surprise -->
 
+<div id="messageBox" class="card" style="display:none;">
 
-<!-- Surprise Message -->
-
-<div id="messageBox" style="display:none;">
-
-<h1>I Have A Surprise For You ❤️</h1>
+<h1>🎁 Surprise 🎁</h1>
 
 <p>
-"Some friendships are made by memories,
-laughter and endless support." ✨
+Some friendships are not about how long we know each other...
+They are about the memories we create together ❤️
 </p>
 
 <p>
-Thank you for being a special part of my life 🤍
+Thank you for always being a part of my life.
+Happy Friendship Day 🤍
 </p>
 
-<button onclick="showPhotos()">Open My Surprise 🎁</button>
+<button onclick="showPhotos()">
+Open My Surprise 📸
+</button>
 
 </div>
 
-
-
-<!-- Cinematic Slideshow -->
+<!-- Photo Slideshow -->
 
 <div id="photoBox" style="display:none;">
 
@@ -81,13 +73,9 @@ Thank you for being a special part of my life 🤍
 
 </div>
 
-
-
 </div>
-
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
