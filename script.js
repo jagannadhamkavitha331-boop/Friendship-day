@@ -1,21 +1,51 @@
-let slides = document.querySelectorAll(".slide");
-let index = 0;
-
-function changePhoto() {
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+let questions = [
+    {
+        q: "Mana friendship lo ekkuva drama evaru chestharu? 😂",
+        options: ["Nenu 🤭", "Nuvvu 😂"]
+    },
+    {
+        q: "Mana friendship ki rating entha? ⭐",
+        options: ["10/10 ❤️", "Infinity ♾️"]
+    },
+    {
+        q: "Years change aina mana friendship change avuthunda? 🤝",
+        options: ["Never ❤️", "Asalu kaadu 😄"]
     }
+];
 
-    slides[index].style.display = "block";
+let current = 0;
 
-    index++;
-
-    if (index >= slides.length) {
-        index = 0;
-    }
+function startQuestions(){
+    document.getElementById("questionBox").style.display="none";
+    document.getElementById("quizBox").style.display="block";
+    showQuestion();
 }
 
-changePhoto();
+function noAnswer(){
+    alert("Wrong answer 😄 Try again!");
+}
 
-setInterval(changePhoto, 4000);
+function showQuestion(){
+
+    document.getElementById("questionText").innerHTML =
+    questions[current].q;
+
+    document.getElementById("option1").innerHTML =
+    questions[current].options[0];
+
+    document.getElementById("option2").innerHTML =
+    questions[current].options[1];
+}
+
+function nextQuestion(){
+
+    current++;
+
+    if(current < questions.length){
+        showQuestion();
+    }
+    else{
+        document.getElementById("quizBox").style.display="none";
+        document.getElementById("messageBox").style.display="block";
+    }
+        }
