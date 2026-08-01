@@ -71,22 +71,37 @@ questions[current].options[1];
 
 
 
+
+        
+
 function nextQuestion(){
 
-    current++;
+    let box = document.getElementById("quizBox");
 
-    if(current < questions.length){
+    box.style.opacity = "0";
 
-        showQuestion();
 
-    }
-    else{
+    setTimeout(function(){
 
-        document.getElementById("quizBox").style.display="none";
+        current++;
 
-        document.getElementById("messageBox").style.display="block";
 
-    }
+        if(current < questions.length){
+
+            showQuestion();
+
+            box.style.opacity = "1";
+
+        }
+        else{
+
+            document.getElementById("quizBox").style.display="none";
+
+            document.getElementById("messageBox").style.display="block";
+
+        }
+
+    },800);
 
 }
 
