@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);
+    background: linear-gradient(135deg, #ffd6e7, #fff5f8);
 }
 
 
@@ -19,68 +19,96 @@ body {
 #questionBox,
 #quizBox,
 #messageBox {
-    background: rgba(255,255,255,0.95);
-    padding: 35px 25px;
-    border-radius: 30px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+
+    background: white;
+    padding: 30px 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
 }
 
 
+
 h1 {
-    color:#e91e63;
+
+    color: #e91e63;
+    font-size: 32px;
+
 }
 
 
 h2 {
-    color:#ff4081;
+
+    color: #c2185b;
+
 }
 
 
 p {
-    font-size:18px;
-    color:#555;
-    line-height:1.6;
+
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+
 }
+
 
 
 button {
-    width:85%;
-    padding:15px;
-    margin:10px;
-    border:none;
-    border-radius:30px;
-    background:#e91e63;
-    color:white;
-    font-size:18px;
+
+    width: 85%;
+    padding: 15px;
+    margin: 10px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #e91e63;
+    color: white;
+
+    font-size: 18px;
+
 }
 
+
+
+button:active {
+
+    transform: scale(0.95);
+
+}
+
+
+
+/* Photo Design */
 
 .photo-container {
 
-    position:relative;
+    background: rgba(255,255,255,0.9);
 
-    background:rgba(255,255,255,0.15);
+    padding: 20px;
 
-    padding:20px;
+    border-radius: 25px;
 
-    border-radius:30px;
-
-    backdrop-filter:blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 
 }
+
 
 
 #photo {
 
-    width:100%;
+    width: 100%;
 
-    height:430px;
+    height: 430px;
 
-    object-fit:cover;
+    object-fit: contain;
 
-    border-radius:25px;
+    border-radius: 20px;
 
-    animation:zoom 5s infinite;
+    background: black;
+
+    transition: opacity 1.5s ease;
 
 }
 
@@ -88,40 +116,10 @@ button {
 
 #caption {
 
-    color:white;
+    margin-top: 15px;
 
-    margin-top:20px;
+    color: #e91e63;
 
-    font-size:24px;
-
-}
-
-
-
-@keyframes zoom {
-
-0% {
-
-transform:scale(1);
-
-opacity:0.7;
+    font-size: 22px;
 
 }
-
-50% {
-
-transform:scale(1.08);
-
-opacity:1;
-
-}
-
-100% {
-
-transform:scale(1);
-
-opacity:0.7;
-
-}
-
-    }
