@@ -1,251 +1,113 @@
-body {
-
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
 
+body{
     min-height:100vh;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-    font-family:Arial, sans-serif;
-
-    background:linear-gradient(135deg,#ffd6e7,#fff5f8);
-
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    overflow:hidden;
 }
 
-
-
-.container {
-
-    width:90%;
-
-    max-width:450px;
-
+.container{
+    width:95%;
+    max-width:500px;
     text-align:center;
-
 }
 
-
-
-
-#questionBox,
-#quizBox,
-#messageBox {
-
-    background:white;
-
-    padding:35px 25px;
-
-    border-radius:30px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
-
-    animation:cardShow 1s ease;
-
-}
-
-
-
-
-h1 {
-
-    color:#e91e63;
-
-    font-size:32px;
-
-}
-
-
-
-h2 {
-
-    color:#c2185b;
-
-}
-
-
-
-p {
-
-    color:#555;
-
-    font-size:18px;
-
-    line-height:1.6;
-
-}
-
-
-
-
-button {
-
-    width:85%;
-
-    padding:15px;
-
-    margin:10px;
-
-    border:none;
-
-    border-radius:30px;
-
-    background:#e91e63;
-
-    color:white;
-
-    font-size:18px;
-
-    transition:0.3s;
-
-}
-
-
-
-button:hover {
-
-    transform:scale(1.05);
-
-}
-
-
-
-button:disabled {
-
-    opacity:0.6;
-
-}
-
-
-
-
-/* Question Smooth Effect */
-
-#quizBox {
-
-    transition:opacity 1.5s ease;
-
-}
-
-
-
-
-/* Photo Design */
-
-
-.photo-container {
-
-    background:white;
-
-    padding:20px;
-
-    border-radius:30px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-
-}
-
-
-
-
-#photo {
-
-    width:100%;
-
-    height:430px;
-
-    object-fit:contain;
-
-    background:black;
-
+.card{
+    background:#fff;
+    padding:30px 25px;
     border-radius:25px;
-
-    animation:fadePhoto 2s ease;
-
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    animation:zoomIn .8s ease;
 }
 
-
-
-
-#caption {
-
-    margin-top:20px;
-
+h1{
     color:#e91e63;
-
-    font-size:24px;
-
-    animation:captionShow 1.5s ease;
-
+    margin-bottom:15px;
 }
 
+h2{
+    color:#c2185b;
+    margin-bottom:20px;
+    min-height:70px;
+}
 
+p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:15px;
+}
 
+button{
+    width:90%;
+    padding:15px;
+    margin:10px auto;
+    border:none;
+    border-radius:30px;
+    background:#e91e63;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
 
-@keyframes fadePhoto {
+button:hover{
+    transform:scale(1.05);
+}
 
-    from {
+#quizBox{
+    opacity:1;
+    transition:opacity .4s ease;
+}
 
+.photo-container{
+    background:#fff;
+    padding:15px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+#photo{
+    width:100%;
+    height:500px;
+    object-fit:contain;
+    background:#000;
+    border-radius:20px;
+    animation:fadePhoto 1s ease;
+}
+
+#caption{
+    margin-top:15px;
+    color:#e91e63;
+    font-size:22px;
+    font-weight:bold;
+}
+
+@keyframes fadePhoto{
+    from{
         opacity:0;
-
-        transform:scale(1.03);
-
+        transform:scale(1.05);
     }
-
-
-    to {
-
+    to{
         opacity:1;
-
         transform:scale(1);
-
     }
-
 }
 
-
-
-
-@keyframes cardShow {
-
-    from {
-
+@keyframes zoomIn{
+    from{
         opacity:0;
-
-        transform:scale(0.8);
-
+        transform:scale(.8);
     }
-
-
-    to {
-
+    to{
         opacity:1;
-
         transform:scale(1);
-
     }
-
 }
-
-
-
-
-@keyframes captionShow {
-
-    from {
-
-        opacity:0;
-
-    }
-
-
-    to {
-
-        opacity:1;
-
-    }
-
-    }
