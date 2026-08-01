@@ -1,31 +1,35 @@
 let questions = [
 {
-q:"Mana friendship lo ekkuva drama evaru chestharu? 😂",
-options:["Nenu 🤭","Nuvvu 😂"]
+    q:"Mana friendship lo ekkuva drama evaru chestharu? 😂",
+    options:["Nenu 🤭","Nuvvu 😂"]
 },
 {
-q:"Nuvvu nannu emani pilusthav? 😄",
-options:["Golduu ❤️","Bestie 😊"]
+    q:"Nuvvu nannu emani pilusthav? 😄",
+    options:["Golduu ❤️","Bestie 😊"]
 },
 {
-q:"Nannu first time chusinappudu em anukunnav? 😊",
-options:["Manchi person ❤️","Chala crazy 😂"]
+    q:"Nannu first time chusinappudu em anukunnav? 😊",
+    options:["Manchi person ❤️","Chala crazy 😂"]
 },
 {
-q:"Mana friendship lo funniest memory enti? 😂",
-options:["Crazy moments 😜","Navvina moments ❤️"]
+    q:"Mana friendship lo funniest memory enti? 😂",
+    options:["Crazy moments 😜","Navvina moments ❤️"]
 },
 {
-q:"Naa lo neeku nachina quality enti? ✨",
-options:["Caring ❤️","Funny 😂"]
+    q:"Naa lo neeku nachina quality enti? ✨",
+    options:["Caring ❤️","Funny 😂"]
 },
 {
-q:"Mana friendship ki rating entha? ⭐",
-options:["10/10 ❤️","Infinity ♾️"]
+    q:"Mana friendship ki rating entha? ⭐",
+    options:["10/10 ❤️","Infinity ♾️"]
 },
 {
-q:"Future lo kuda ilane friends ga untama? 🤝",
-options:["Always ❤️","Forever ♾️"]
+    q:"Future lo kuda ilane friends ga untama? 🤝",
+    options:["Always ❤️","Forever ♾️"]
+},
+{
+    q:"Last question... nenu special friend aa? 🥹",
+    options:["Yes ❤️","Of course 😍"]
 }
 ];
 
@@ -35,32 +39,34 @@ let current = 0;
 
 function startQuestions(){
 
-document.getElementById("questionBox").style.display="none";
+    document.getElementById("questionBox").style.display="none";
 
-document.getElementById("quizBox").style.display="block";
+    document.getElementById("quizBox").style.display="block";
 
-showQuestion();
+    showQuestion();
 
 }
 
 
 function noAnswer(){
 
-alert("Try again 😄");
+    alert("Try again 😄");
 
 }
 
 
 function showQuestion(){
 
-document.getElementById("questionText").innerHTML =
-questions[current].q;
+    document.getElementById("questionText").innerHTML =
+    questions[current].q;
 
-document.getElementById("option1").innerHTML =
-questions[current].options[0];
 
-document.getElementById("option2").innerHTML =
-questions[current].options[1];
+    document.getElementById("option1").innerHTML =
+    questions[current].options[0];
+
+
+    document.getElementById("option2").innerHTML =
+    questions[current].options[1];
 
 }
 
@@ -68,32 +74,33 @@ questions[current].options[1];
 
 function nextQuestion(){
 
-current++;
+    current++;
 
-if(current < questions.length){
+    if(current < questions.length){
 
-showQuestion();
+        showQuestion();
+
+    }
+    else{
+
+        document.getElementById("quizBox").style.display="none";
+
+        document.getElementById("messageBox").style.display="block";
+
+    }
 
 }
-else{
-
-document.getElementById("quizBox").style.display="none";
-
-document.getElementById("messageBox").style.display="block";
-
-}
-
-}
 
 
 
 
-// Photos slideshow
+// Photos Slideshow
 
 let photoIndex = 0;
 
 
 let photos = [
+
 "Snapchat-181886413.jpg",
 "IMG_9919.JPG",
 "IMG_20250328_152814.jpg",
@@ -102,10 +109,12 @@ let photos = [
 "IMG_1609.JPEG",
 "IMG_1608.JPEG",
 "IMG_1442.JPG"
+
 ];
 
 
 let captions = [
+
 "Beautiful memories ❤️",
 "Every moment was special ✨",
 "Crazy friendship days 😂",
@@ -114,19 +123,20 @@ let captions = [
 "Never forget these moments ❤️",
 "Special bond ✨",
 "Forever memories 📸"
+
 ];
 
 
 
 function showPhotos(){
 
-document.getElementById("messageBox").style.display="none";
+    document.getElementById("messageBox").style.display="none";
 
-document.getElementById("photoBox").style.display="block";
+    document.getElementById("photoBox").style.display="block";
 
-photoIndex = 0;
+    photoIndex = 0;
 
-changePhoto();
+    changePhoto();
 
 }
 
@@ -134,35 +144,39 @@ changePhoto();
 
 function changePhoto(){
 
-let img = document.getElementById("photo");
+    let img = document.getElementById("photo");
 
-let text = document.getElementById("caption");
-
-
-img.style.opacity = 0;
+    let text = document.getElementById("caption");
 
 
-setTimeout(function(){
-
-img.src = photos[photoIndex];
-
-text.innerHTML = captions[photoIndex];
-
-img.style.opacity = 1;
+    img.style.opacity = 0;
 
 
-photoIndex++;
+    setTimeout(function(){
 
 
-if(photoIndex >= photos.length){
+        img.src = photos[photoIndex];
 
-photoIndex = 0;
-
-}
-
-},1000);
+        text.innerHTML = captions[photoIndex];
 
 
-setTimeout(changePhoto,5000);
+        img.style.opacity = 1;
+
+
+        photoIndex++;
+
+
+        if(photoIndex >= photos.length){
+
+            photoIndex = 0;
+
+        }
+
+
+    },1000);
+
+
+
+    setTimeout(changePhoto,7000);
 
 }
