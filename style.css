@@ -4,9 +4,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ffd6e7, #fff5f8);
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #fff0f5);
 }
+
 
 .container {
     width: 90%;
@@ -18,10 +19,11 @@ body {
 #questionBox,
 #quizBox,
 #messageBox {
-    background: white;
+    background: rgba(255,255,255,0.9);
     padding: 35px 25px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: appear 1s ease;
 }
 
 
@@ -30,35 +32,46 @@ h1 {
     font-size: 32px;
 }
 
+
 h2 {
     color: #c2185b;
 }
 
 
+p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
 button {
-    width: 80%;
-    padding: 15px;
+    width: 85%;
+    padding: 14px;
     margin: 10px;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     background: #e91e63;
     color: white;
     font-size: 18px;
-    cursor: pointer;
 }
 
 
-button:hover {
-    transform: scale(1.05);
+button:active {
+    transform: scale(0.95);
 }
 
 
-.slideshow {
-    width: 100%;
-}
+@keyframes appear {
 
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
 
-.slide {
-    width: 100%;
-    border-radius: 20px;
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
 }
