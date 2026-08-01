@@ -47,7 +47,6 @@ function startQuestions(){
 }
 
 
-
 function noAnswer(){
 
     alert("Try again 😄");
@@ -80,7 +79,7 @@ function nextQuestion(){
 
     let box = document.getElementById("quizBox");
 
-    box.style.opacity = "0";
+    box.style.opacity="0";
 
 
     setTimeout(function(){
@@ -92,7 +91,7 @@ function nextQuestion(){
 
             showQuestion();
 
-            box.style.opacity = "1";
+            box.style.opacity="1";
 
         }
         else{
@@ -104,7 +103,7 @@ function nextQuestion(){
         }
 
 
-        buttons.forEach(btn => btn.disabled = false);
+        buttons.forEach(btn => btn.disabled=false);
 
 
     },2500);
@@ -120,24 +119,12 @@ let photoIndex = 0;
 
 
 let photos = [
-    "Snapchat-181886413.jpg",
-    "IMG_9919.JPG",
-    "IMG_20250328_152814.jpg",
-    "IMG_20250328_143737.jpg",
-    "IMG_1610.JPEG",
-    "IMG_1609.JPEG",
-    "IMG_1608.JPEG"
+    "1773888361623.jpg"
 ];
 
 
 let captions = [
-    "Beautiful memories ❤️",
-    "Every moment was special ✨",
-    "Crazy friendship days 😂",
-    "Always remember these smiles 😊",
-    "Friendship forever 🤝",
-    "Never forget these moments ❤️",
-    "Forever memories 📸"
+    "Beautiful memories ❤️"
 ];
 
 
@@ -148,7 +135,7 @@ function showPhotos(){
 
     document.getElementById("photoBox").style.display="block";
 
-    photoIndex = 0;
+    photoIndex=0;
 
     changePhoto();
 
@@ -158,26 +145,14 @@ function showPhotos(){
 
 function changePhoto(){
 
-    let img = document.getElementById("photo");
+    let img=document.getElementById("photo");
 
-    let text = document.getElementById("caption");
+    let text=document.getElementById("caption");
 
 
     img.src = photos[photoIndex];
 
     text.innerHTML = captions[photoIndex];
 
-
-    photoIndex++;
-
-
-    if(photoIndex >= photos.length){
-
-        photoIndex = 0;
-
-    }
-
-
-    setTimeout(changePhoto,8000);
 
 }
