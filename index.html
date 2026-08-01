@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +15,47 @@
 
 <div class="container">
 
+<!-- First Question -->
+
+<div id="questionBox">
+
+<h1>Are you Eswar? 😊</h1>
+
+<button onclick="startQuestions()">Yes ❤️</button>
+
+<button onclick="noAnswer()">No 😄</button>
+
+</div>
+
+
+<!-- Questions -->
+
+<div id="quizBox" style="display:none;">
+
+<h2 id="questionText"></h2>
+
+<button onclick="nextQuestion()">Next ➡️</button>
+
+</div>
+
+
+<!-- Friendship Message -->
+
+<div id="messageBox" style="display:none;">
+
 <h1>Happy Friendship Day ❤️</h1>
 
-<h2>Welcome Eswar 😊</h2>
-
 <p>
-This surprise is specially made for you ❤️<br>
-Thank you for all the beautiful memories and moments.
+Some friendships are not just memories,
+they are beautiful journeys forever ✨
 </p>
 
+</div>
+
+
+<!-- Photos -->
+
+<div id="photoBox" style="display:none;">
 
 <div class="slideshow">
 
@@ -43,8 +76,8 @@ Thank you for all the beautiful memories and moments.
 
 </div>
 
+</div>
 
-<h2>Forever Friends ❤️</h2>
 
 </div>
 
@@ -52,4 +85,5 @@ Thank you for all the beautiful memories and moments.
 <script src="script.js"></script>
 
 </body>
+
 </html>
