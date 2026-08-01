@@ -39,13 +39,13 @@ let current = 0;
 
 function startQuestions(){
 
-    document.getElementById("questionBox").style.display = "none";
-
-    document.getElementById("quizBox").style.display = "block";
+    document.getElementById("questionBox").style.display="none";
+    document.getElementById("quizBox").style.display="block";
 
     showQuestion();
 
 }
+
 
 
 function noAnswer(){
@@ -55,15 +55,14 @@ function noAnswer(){
 }
 
 
+
 function showQuestion(){
 
     document.getElementById("questionText").innerHTML =
     questions[current].q;
 
-
     document.getElementById("option1").innerHTML =
     questions[current].options[0];
-
 
     document.getElementById("option2").innerHTML =
     questions[current].options[1];
@@ -73,6 +72,11 @@ function showQuestion(){
 
 
 function nextQuestion(){
+
+    let buttons = document.querySelectorAll("#quizBox button");
+
+    buttons.forEach(btn => btn.disabled = true);
+
 
     let box = document.getElementById("quizBox");
 
@@ -93,21 +97,24 @@ function nextQuestion(){
         }
         else{
 
-            document.getElementById("quizBox").style.display = "none";
+            document.getElementById("quizBox").style.display="none";
 
-            document.getElementById("messageBox").style.display = "block";
+            document.getElementById("messageBox").style.display="block";
 
         }
 
 
-    },1500);
+        buttons.forEach(btn => btn.disabled = false);
+
+
+    },2500);
 
 }
 
 
 
 
-// Photos Slideshow
+// Photos
 
 let photoIndex = 0;
 
@@ -137,9 +144,9 @@ let captions = [
 
 function showPhotos(){
 
-    document.getElementById("messageBox").style.display = "none";
+    document.getElementById("messageBox").style.display="none";
 
-    document.getElementById("photoBox").style.display = "block";
+    document.getElementById("photoBox").style.display="block";
 
     photoIndex = 0;
 
@@ -156,29 +163,19 @@ function changePhoto(){
     let text = document.getElementById("caption");
 
 
-    img.classList.remove("show");
+    img.src = photos[photoIndex];
+
+    text.innerHTML = captions[photoIndex];
 
 
-    setTimeout(function(){
-
-        img.src = photos[photoIndex];
-
-        text.innerHTML = captions[photoIndex];
+    photoIndex++;
 
 
-        img.classList.add("show");
+    if(photoIndex >= photos.length){
 
+        photoIndex = 0;
 
-        photoIndex++;
-
-
-        if(photoIndex >= photos.length){
-
-            photoIndex = 0;
-
-        }
-
-    },1000);
+    }
 
 
     setTimeout(changePhoto,8000);
