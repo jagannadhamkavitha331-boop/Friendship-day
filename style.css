@@ -1,30 +1,46 @@
 body {
+
     margin:0;
+
     min-height:100vh;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     font-family:Arial, sans-serif;
+
     background:linear-gradient(135deg,#ffd6e7,#fff5f8);
+
 }
+
 
 
 .container {
+
     width:90%;
+
     max-width:450px;
+
     text-align:center;
+
 }
 
 
-/* Question & Message Cards */
+
 
 #questionBox,
 #quizBox,
 #messageBox {
 
     background:white;
+
     padding:35px 25px;
+
     border-radius:30px;
+
     box-shadow:0 10px 30px rgba(0,0,0,0.2);
 
     animation:cardShow 1s ease;
@@ -32,33 +48,53 @@ body {
 }
 
 
+
+
 h1 {
+
     color:#e91e63;
+
+    font-size:32px;
+
 }
+
 
 
 h2 {
+
     color:#c2185b;
+
 }
+
 
 
 p {
+
     color:#555;
+
     font-size:18px;
+
     line-height:1.6;
+
 }
+
+
 
 
 button {
 
     width:85%;
+
     padding:15px;
+
     margin:10px;
 
     border:none;
+
     border-radius:30px;
 
     background:#e91e63;
+
     color:white;
 
     font-size:18px;
@@ -68,6 +104,7 @@ button {
 }
 
 
+
 button:hover {
 
     transform:scale(1.05);
@@ -75,7 +112,17 @@ button:hover {
 }
 
 
-/* Question Fade */
+
+button:disabled {
+
+    opacity:0.6;
+
+}
+
+
+
+
+/* Question Smooth Effect */
 
 #quizBox {
 
@@ -85,7 +132,9 @@ button:hover {
 
 
 
+
 /* Photo Design */
+
 
 .photo-container {
 
@@ -101,6 +150,7 @@ button:hover {
 
 
 
+
 #photo {
 
     width:100%;
@@ -113,19 +163,10 @@ button:hover {
 
     border-radius:25px;
 
-    opacity:0;
-
-    transition:opacity 2s ease;
+    animation:fadePhoto 2s ease;
 
 }
 
-
-
-#photo.show {
-
-    opacity:1;
-
-}
 
 
 
@@ -143,40 +184,68 @@ button:hover {
 
 
 
+
+@keyframes fadePhoto {
+
+    from {
+
+        opacity:0;
+
+        transform:scale(1.03);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
 @keyframes cardShow {
 
-from{
+    from {
 
-opacity:0;
+        opacity:0;
 
-transform:scale(0.8);
+        transform:scale(0.8);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
 
 }
 
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
 
 
 
 @keyframes captionShow {
 
-from{
+    from {
 
-opacity:0;
+        opacity:0;
 
-}
+    }
 
-to{
 
-opacity:1;
+    to {
 
-}
+        opacity:1;
 
-                                }
+    }
+
+    }
