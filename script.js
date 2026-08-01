@@ -1,20 +1,21 @@
-let current = 0;
-const slides = document.querySelectorAll(".slide");
+let slides = document.querySelectorAll(".slide");
+let index = 0;
 
-function showSlide() {
-    slides.forEach((slide) => {
-        slide.classList.remove("active");
-    });
+function changePhoto() {
 
-    slides[current].classList.add("active");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
 
-    current++;
+    slides[index].style.display = "block";
 
-    if (current >= slides.length) {
-        current = 0;
+    index++;
+
+    if (index >= slides.length) {
+        index = 0;
     }
 }
 
-showSlide();
+changePhoto();
 
-setInterval(showSlide, 4000);
+setInterval(changePhoto, 4000);
