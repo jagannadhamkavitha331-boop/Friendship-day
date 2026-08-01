@@ -1,15 +1,27 @@
 let questions = [
     {
+        q: "Nenu nijanga Eswar tho friendship chesthunna na? 😄",
+        options: ["Yes ❤️", "Definitely 😎"]
+    },
+    {
         q: "Mana friendship lo ekkuva drama evaru chestharu? 😂",
         options: ["Nenu 🤭", "Nuvvu 😂"]
+    },
+    {
+        q: "Nannu first time chusinappudu em anukunnav? 😄",
+        options: ["Manchi person 😊", "Chala crazy 😂"]
     },
     {
         q: "Mana friendship ki rating entha? ⭐",
         options: ["10/10 ❤️", "Infinity ♾️"]
     },
     {
+        q: "Mana memories lo best enti? 📸",
+        options: ["Fun moments 😂", "Anni special ❤️"]
+    },
+    {
         q: "Years change aina mana friendship change avuthunda? 🤝",
-        options: ["Never ❤️", "Asalu kaadu 😄"]
+        options: ["Never ❤️", "Asalu kaadu 😎"]
     }
 ];
 
@@ -22,7 +34,7 @@ function startQuestions(){
 }
 
 function noAnswer(){
-    alert("Wrong answer 😄 Try again!");
+    alert("Wrong person 😄 Try again!");
 }
 
 function showQuestion(){
@@ -37,6 +49,7 @@ function showQuestion(){
     questions[current].options[1];
 }
 
+
 function nextQuestion(){
 
     current++;
@@ -48,4 +61,4 @@ function nextQuestion(){
         document.getElementById("quizBox").style.display="none";
         document.getElementById("messageBox").style.display="block";
     }
-        }
+}
